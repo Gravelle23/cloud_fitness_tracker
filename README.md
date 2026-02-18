@@ -1,6 +1,6 @@
 Overview
 
-As a software engineer, I am working to strengthen my understanding of how applications interact with cloud databases. For this project, I built a Cloud Fitness Tracker in Python that connects to a Firebase Firestore database.
+As a software Developer, I am working to strengthen my understanding of how applications interact with cloud databases. For this project, I built a Cloud Fitness Tracker in Python that connects to a Firebase Firestore database.
 
 This terminal-based application allows users to:
 
