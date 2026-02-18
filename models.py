@@ -7,7 +7,7 @@ def create_user(db, name, email):
     doc_ref.set({
         "name": name,
         "email": email,
-        "created_at": datetime.utcnow().isoformat()
+        "createdAt": datetime.utcnow().isoformat()
     })
     return doc_ref.id
 
@@ -43,7 +43,7 @@ def create_entry(db, user_id, entry_type, title, calories=None, duration=None):
         "userId" : user_id.strip(),
         "type" : entry_type.strip(),
         "title" : title.strip(),
-        "created_at" : datetime.utcnow().isoformat()
+        "createdAt" : datetime.utcnow().isoformat()
     }
 
     if calories is not None:
@@ -69,12 +69,12 @@ def get_entries(db, user_id = None):
         entries.append(data)
 
     #newest first
-    entries.sort(key=lambda e: e.get("created_at", ""), reverse=True)
+    entries.sort(key=lambda e: e.get("createdAt", ""), reverse=True)
     return entries
 
 def update_entry(db, entry_id, updates):
     #update an entry by its ID
-    updates["updates_at"] = datetime.utcnow().isoformat()
+    updates["updatesAt"] = datetime.utcnow().isoformat()
     db.collection("entries").document(entry_id).update(updates)
 
 def delete_entry(db, entry_id):
