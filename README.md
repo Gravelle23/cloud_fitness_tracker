@@ -30,7 +30,7 @@ Run:
 python main.py
 
 
-Software Demo Video
+Software Demo Video: https://youtu.be/jKk0QS1imXI
 
 Cloud Database
 
